@@ -14,6 +14,8 @@ struct LandmarkRow: View {
         HStack {
             landmark.image
                 .resizable()
+                .clipShape(Circle())
+                .overlay(Circle().stroke(Color.white, lineWidth: 4))
                 .frame(width: 50, height: 50)
             Text(landmark.name)
             Spacer()
